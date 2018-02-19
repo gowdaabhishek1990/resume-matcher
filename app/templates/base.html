@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/bootstrap.css") }}">
+    <title>CaptainJack</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse bg-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="/static/images/jack.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            CaptainJack
+        </a>
+        <form class="form-inline" action="{{ url_for('search_keywords') }}" method="POST">
+            <input class="form-control mr-sm-2" type="text" placeholder="Keywords" name="keywords">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    {% block content %}
+    {% endblock %}
+{% block script %}
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename="js/bootstrap.js") }}"></script>
+{% endblock %}
+</body>
+</html>

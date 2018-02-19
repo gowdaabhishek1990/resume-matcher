@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h3>Resume matcher</h3>
+            <p>
+                This form here uploads resume to the server.
+                To search for keywords in resume use the search bar in the navigation which
+                displays resumes that match the keywords
+            </p>
+            <form action="{{ url_for('upload_cv') }}" method="POST" enctype="multipart/form-data">
+                <label>Upload CV here</label>
+                <input type="file" name="file">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}

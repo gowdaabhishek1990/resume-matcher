@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if paths|length > 0 %}
+    <h2>Resumes containing keywords: {{ keywords }}</h2>
+    {% for path in paths %}
+    <a href="{{ url_for('static', filename='cv-uploads/' + path) }}">{{ path }}</a><br>
+    {% endfor %}
+{% else %}
+    <h2>No matching resumes to keywords</h2>
+{% endif %}
+{% endblock %}

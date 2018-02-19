@@ -1,0 +1,6 @@
+Flask-Migrate
+Flask-User
+Flask-WTF
+Flask-SQLAlchemy
+Wand
+mysql-connector-python-rf

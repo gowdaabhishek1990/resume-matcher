@@ -2,5 +2,6 @@ Flask-Migrate
 Flask-User
 Flask-WTF
 Flask-SQLAlchemy
+Flask-Script
 Wand
 mysql-connector-python-rf
